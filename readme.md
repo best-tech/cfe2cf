@@ -48,7 +48,7 @@
 
 Пример:
 
-`cfe2cf file -t c:/temp path/to/ext.cfe ИмяРасширения path/to/conf.cf`
+`cfe2cf file -t c:/temp path/to/ext.src ИмяРасширения path/to/conf.cf`
 
 ```
 Команда: s, source
