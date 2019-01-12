@@ -27,7 +27,7 @@
 ## Конвертация файла расширения 
 Пример:
 
-`cfe2cf file -t c:/temp -n МоеРасширение path/to/ext.cfe ИмяРасширения path/to/conf.cf`
+`cfe2cf file -t c:/temp path/to/ext.cfe ИмяРасширения path/to/conf.cf`
 
 ```
 Команда: f, file
@@ -48,7 +48,7 @@
 
 Пример:
 
-`cfe2cf file -t c:/temp -n МоеРасширение path/to/ext.cfe ИмяРасширения path/to/conf.cf`
+`cfe2cf file -t c:/temp path/to/ext.cfe ИмяРасширения path/to/conf.cf`
 
 ```
 Команда: s, source
