@@ -27,38 +27,44 @@
 ## Конвертация файла расширения 
 Пример:
 
-`cfe2cf file -t c:/temp -n МоеРасширение path/to/ext.cfe path/to/conf.cf`
+`cfe2cf file -t c:/temp -n МоеРасширение path/to/ext.cfe ИмяРасширения path/to/conf.cf`
 
 ```
-Конвертация из файла расширения (.cfe) в файл конфигурации (.cf)
+Команда: f, file
+ Конвертация из файла расширения (.cfe) в файл конфигурации (.cf)
 
-Строка запуска: cfe2cf f [ОПЦИИ] SRC OUTPUT
+Строка запуска: cfe2cf f [ОПЦИИ] SRC NAME OUTPUT
 
 Аргументы:
   SRC           Путь к входному файлу расширения (.cfe)
+  NAME          Имя расширения (-Extension)
   OUTPUT        Путь к выходному файлу конфигурации (.cf)
 
 Опции:
   -t, --tempdir         Путь к каталогу временных файлов
-  -n, --name            Имя расширения (-Extension)
 ```
 
 ## Конвертация из исходных файлов
 
 Пример:
 
-`cfe2cf file -t c:/temp -n МоеРасширение path/to/ext.cfe path/to/conf.cf`
+`cfe2cf file -t c:/temp -n МоеРасширение path/to/ext.cfe ИмяРасширения path/to/conf.cf`
 
 ```
-Конвертация из исходных файлов расширения (.cfe) в файл конфигурации (.cf)
+Команда: s, source
+ Конвертация из исходных файлов расширения (.cfe) в файл конфигурации (.cf)
 
-Строка запуска: cfe2cf s [ОПЦИИ] SRC OUTPUT
+Строка запуска: cfe2cf s [ОПЦИИ] SRC NAME OUTPUT
 
 Аргументы:
   SRC           Путь папке исходных файлов
+  NAME          Имя расширения (-Extension)
   OUTPUT        Путь к выходному файлу конфигурации (.cf)
 
 Опции:
   -t, --tempdir         Путь к каталогу временных файлов
-  -n, --name            Имя расширения (-Extension)
 ```
+
+### Собрать cfe2cf.exe
+
+`oscript -make src/cfe2cf.os cfe2cf.exe`

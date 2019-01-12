@@ -58,27 +58,16 @@ cache:
     - '$HOME/docker'
 jobs:
   include:
-    - stage: Сборка и публикация github & hub.oscript.io
+    - stage: Сборка и публикация github
       script: skip 
       before_deploy:
-        - docker run -it -v $(pwd):/work_dir evilbeaver/onescript:1.0.19 sh -c 'cd /work_dir; opm build ./ ; exit'
+        - docker run -it -v $(pwd):/work_dir evilbeaver/onescript:1.0.19 sh -c 'cd /work_dir;  oscript -make src/cfe2cf.os cfe2cf.exe ; exit'
       deploy:
         - provider: releases
           api_key: "$GITHUB_OAUTH_TOKEN"
           file_glob: true
           file: $PACKAGE_NAME*.exe
           skip_cleanup: true
-          on:
-            branch: master
-            tags: true
-        - provider: script
-          skip_cleanup: true
-          script: docker run -it -v $(pwd):/work_dir evilbeaver/onescript:1.0.19 sh -c 'cd /work_dir; opm push --token $GITHUB_OAUTH_TOKEN --channel dev --file ./$PACKAGE_NAME-*.ospx; exit'
-          on:
-            branch: develop
-        - provider: script
-          skip_cleanup: true
-          script: docker run -it -v $(pwd):/work_dir evilbeaver/onescript:1.0.19 sh -c 'cd /work_dir; opm push --token $GITHUB_OAUTH_TOKEN --channel stable --file ./$PACKAGE_NAME-*.ospx; exit'
           on:
             branch: master
             tags: true
