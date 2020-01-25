@@ -3,7 +3,7 @@
 // Полную документацию см. на hub.oscript.io/packaging
 //
 
-Описание.Имя("cli")
+Описание.Имя("cfe2cf")
         .Версия("0.0.1")
         .Автор("Denis Kharchenko")
         .АдресАвтора("kharchenkodenis@gmail.com")
