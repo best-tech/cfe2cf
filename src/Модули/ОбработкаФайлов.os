@@ -14,6 +14,8 @@
 
 	ТекстФайл = ТекстовыйДокумент.ПолучитьТекст();
 	ТекстФайл = СтрЗаменить(ТекстФайл, "<ConfigurationExtensionPurpose>Customization</ConfigurationExtensionPurpose>", "");
+	ТекстФайл = СтрЗаменить(ТекстФайл, "<ConfigurationExtensionPurpose>AddOn</ConfigurationExtensionPurpose>", "");
+	ТекстФайл = СтрЗаменить(ТекстФайл, "<ConfigurationExtensionPurpose>Patch</ConfigurationExtensionPurpose>", "");
 	ТекстФайл = СтрЗаменить(ТекстФайл, "<ObjectBelonging>Adopted</ObjectBelonging>", "");
 	
 	ТекстовыйДокумент.УстановитьТекст(ТекстФайл);
