@@ -1,0 +1,1 @@
+oscript -make ./src/cfe2cf.os ./bin/cfe2cf.exe
