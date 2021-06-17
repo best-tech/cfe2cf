@@ -1,5 +1,5 @@
 *.ospx
 tests.xml
 coverage/*
-
+bin
 tests-reports/*
