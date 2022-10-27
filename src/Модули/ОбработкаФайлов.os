@@ -17,6 +17,7 @@
 	ТекстФайл = СтрЗаменить(ТекстФайл, "<ConfigurationExtensionPurpose>AddOn</ConfigurationExtensionPurpose>", "");
 	ТекстФайл = СтрЗаменить(ТекстФайл, "<ConfigurationExtensionPurpose>Patch</ConfigurationExtensionPurpose>", "");
 	ТекстФайл = СтрЗаменить(ТекстФайл, "<ObjectBelonging>Adopted</ObjectBelonging>", "");
+	ТекстФайл = СтрЗаменить(ТекстФайл, "ConfigurationExtensionCompatibilityMode", "CompatibilityMode");
 	
 	ТекстовыйДокумент.УстановитьТекст(ТекстФайл);
 
